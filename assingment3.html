@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+</head>
+<body>
+
+    <h2 align="center">Registration</h2>
+
+    <form action="Thankyou.html" method="GET">
+
+        <input type="hidden" name="user_id" value="12345">
+
+        <table border="1" align="center" cellpadding="8" cellspacing="0" width="70%">
+            
+            <tr>
+                <th colspan="2" align="center" bgcolor="#f2f2f2">Personal Data</th>
+            </tr>
+
+            <tr>
+                <td>First Name</td>
+                <td>
+                    <input type="text" name="first_name" required pattern="[A-Za-z\s]+" title="يجب أن يحتوي على حروف فقط">[cite: 2]
+                </td>
+            </tr>
+
+            <tr>
+                <td>Last Name</td>
+                <td>
+                    <input type="text" name="last_name" required pattern="[A-Za-z\s]+" title="يجب أن يحتوي على حروف فقط">[cite: 2]
+                </td>
+            </tr>
+
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="email" name="email" placeholder="example@domain.com" required>[cite: 2]
+                </td>
+            </tr>
+
+            <tr>
+                <td>Phone Number</td>
+                <td>
+                    <input type="tel" name="phone" placeholder="01012345678" required pattern="^01[0125][0-9]{8}$" title="رقم مصري صحيح يبدأ ب 010, 011, 012, أو 015 ومكون من 11 رقم">[cite: 2]
+                </td>
+            </tr>
+
+            <tr>
+                <td>Password</td>
+                <td>
+                    <input type="password" name="password" required 
+                           pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}" 
+                           title="يجب ألا تقل عن 8 حروف وتتضمن حرف كبير، حرف صغير، رقم، ورمز خاص">[cite: 2]
+                </td>
+            </tr>
+
+            <tr>
+                <td>Repeat Password</td>
+                <td>
+                    <input type="password" name="repeat_password" required>[cite: 2]
+                </td>
+            </tr>
+
+            <tr>
+                <td>GPA</td>
+                <td>
+                    <input type="number" name="gpa" min="0.0" max="4.0" step="0.1" required>[cite: 2]
+                </td>
+            </tr>
+
+            <tr>
+                <td>Date of Birth</td>
+                <td>
+                    <input type="date" name="dob" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Upload Picture</td>
+                <td>
+                    <input type="file" name="picture">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender" value="Male" required> Male[cite: 1]
+                    <input type="radio" name="gender" value="Female"> Female[cite: 1]
+                </td>
+            </tr>
+
+            <tr>
+                <td>Faculty</td>
+                <td>
+                    <select name="faculty" required>[cite: 1]
+                        <option value="">-- Choose Faculty --</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="AI">Artificial Intelligence</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="2" align="center" bgcolor="#f2f2f2">Interests</th>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <table width="100%">
+                        <tr>
+                            <td><input type="checkbox" name="interest[]" value="Programming"> Programming[cite: 1]</td>
+                            <td><input type="checkbox" name="interest[]" value="Drawing"> Drawing</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="interest[]" value="Reading"> Reading[cite: 1]</td>
+                            <td><input type="checkbox" name="interest[]" value="Playing Football"> Playing Football[cite: 1]</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="interest[]" value="Swimming"> Swimming[cite: 1]</td>
+                            <td><input type="checkbox" name="interest[]" value="Music"> Music</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <b>About you</b><br>
+                    <textarea name="about" rows="4" cols="50"></textarea>[cite: 1]
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Ok">[cite: 1]
+                    <input type="reset" value="Cancel">[cite: 1]
+                </td>
+            </tr>
+
+        </table>
+
+        <br>
+
+        <div align="center">
+            <input type="checkbox" name="terms" required> 
+            I agreed to all <a href="https://www.google.com" target="_blank">terms and conditions</a>[cite: 1]
+        </div>
+
+    </form>
+
+</body>
+</html>
